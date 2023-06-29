@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/toFragmentThreeFromClassification"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_arrow_back_anti"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"></Button>
+    <ScrollView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="70dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classification_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"></androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/toAdd"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:textSize="20dp"
+        android:background="@drawable/button_style1"
+        android:layout_gravity="center_horizontal"
+        android:text="添加分类"></Button>
+</LinearLayout>

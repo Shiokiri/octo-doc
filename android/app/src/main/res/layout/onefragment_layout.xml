@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <Spinner
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/spinner"
+        android:layout_gravity="left"
+        android:layout_marginTop="50dp"
+        android:spinnerMode="dropdown"
+        android:dropDownVerticalOffset="45dp"
+        android:background="@null"></Spinner>
+    <ScrollView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="120dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/note_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"></androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-110dp"
+        android:background="@drawable/button_style2"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="80dp"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        ></Button>
+
+</LinearLayout>
