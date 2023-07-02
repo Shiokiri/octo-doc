@@ -1,0 +1,22 @@
+name: Server
+
+on:
+  push:
+    branches:
+        - main
+    paths:
+        - backend/**
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload & deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          user: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          
+          last_ssh: |
+            sh deploy.sh

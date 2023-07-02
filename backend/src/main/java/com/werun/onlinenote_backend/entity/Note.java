@@ -57,7 +57,7 @@ public class Note {
     /**
      * 内容（仅文本）
      */
-    @Column(length = 65535)
+    @Column
     private String noteContent;
 
     /**
