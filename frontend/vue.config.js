@@ -6,7 +6,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8081',  // 后台接口地址
+        target: 'http://shiokiri.com:8081',  // 后台接口地址
         secure: true,  // 如果是https接口，需要配置这个参数
         changeOrigin: true,  //是否跨域
         pathRewrite: {	// 重写路径
