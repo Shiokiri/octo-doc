@@ -1,4 +1,4 @@
-package com.cym.notebook;
+package com.werun.notebook;
 
 import org.junit.Test;
 

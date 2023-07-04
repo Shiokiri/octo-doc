@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cym.notebook">
+    package="com.werun.notebook">
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Notebook">
         <activity
-            android:name=".Activity.MainActivity"
+            android:name="com.werun.notebook.Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,34 +21,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.LoginActivity">
+            android:name="com.werun.notebook.Activity.LoginActivity">
         </activity>
         <activity
-            android:name=".Activity.SignupActivity">
+            android:name="com.werun.notebook.Activity.SignupActivity">
         </activity>
         <activity
-            android:name=".Activity.UserActivity">
+            android:name="com.werun.notebook.Activity.UserActivity">
         </activity>
         <activity
-            android:name=".Activity.ChangeActivity">
+            android:name="com.werun.notebook.Activity.ChangeActivity">
         </activity>
         <activity
-            android:name=".Activity.ClassificationActivity">
+            android:name="com.werun.notebook.Activity.ClassificationActivity">
         </activity>
         <activity
-            android:name=".Activity.AddClassificationActivity">
+            android:name="com.werun.notebook.Activity.AddClassificationActivity">
         </activity>
         <activity
-            android:name=".Activity.ClassificationNameChangeActivity">
+            android:name="com.werun.notebook.Activity.ClassificationNameChangeActivity">
         </activity>
         <activity
-            android:name=".Activity.AddNoteActivity">
+            android:name="com.werun.notebook.Activity.AddNoteActivity">
         </activity>
         <activity
-            android:name=".Activity.NoteActivity">
+            android:name="com.werun.notebook.Activity.NoteActivity">
         </activity>
         <activity
-            android:name=".Activity.EditNoteActivity">
+            android:name="com.werun.notebook.Activity.EditNoteActivity">
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.cym.notebook.Activity;
+package com.werun.notebook.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,20 +12,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cym.notebook.Bean.Classification;
-import com.cym.notebook.Bean.Note;
-import com.cym.notebook.Bean.ResultClassification;
-import com.cym.notebook.Bean.ResultUser;
-import com.cym.notebook.Bean.User;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Bean.Classification;
+import com.werun.notebook.Bean.Note;
+import com.werun.notebook.Bean.ResultClassification;
+import com.werun.notebook.Bean.ResultUser;
+import com.werun.notebook.Bean.User;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -43,11 +43,9 @@ import okhttp3.Response;
 public class EditNoteActivity extends AppCompatActivity {
     List<String> starArray = new ArrayList<String>();
     final Handler handler = new Handler();
-    RecyclerView recyclerView;
     List<Classification> classificationList;
     String cid;
     String cname;
-    int state=0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

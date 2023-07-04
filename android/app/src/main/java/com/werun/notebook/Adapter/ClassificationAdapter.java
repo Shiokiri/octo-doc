@@ -1,4 +1,4 @@
-package com.cym.notebook.Adapter;
+package com.werun.notebook.Adapter;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,27 +9,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cym.notebook.Activity.ChangeActivity;
-import com.cym.notebook.Activity.ClassificationNameChangeActivity;
-import com.cym.notebook.Activity.MainActivity;
-import com.cym.notebook.Bean.Classification;
-import com.cym.notebook.Bean.ResultClassification;
-import com.cym.notebook.Bean.ResultUser;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Activity.ClassificationNameChangeActivity;
+import com.werun.notebook.Bean.Classification;
+import com.werun.notebook.Bean.ResultClassification;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -150,11 +145,6 @@ public class ClassificationAdapter extends RecyclerView.Adapter<ClassificationAd
                                 }
                             }
                         }).start();
-
-
-
-
-
                     }
                 }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
@@ -166,14 +156,11 @@ public class ClassificationAdapter extends RecyclerView.Adapter<ClassificationAd
                 return false;
             }
         });
-
-
-
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ClassificationAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NotNull ClassificationAdapter.ViewHolder holder, int position) {
         Classification classification = mClassificationList.get(position);
         holder.classificationName.setText(classification.getCategoryName());
     }

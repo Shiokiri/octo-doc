@@ -1,4 +1,4 @@
-package com.cym.notebook.Bean;
+package com.werun.notebook.Bean;
 
 import java.util.List;
 

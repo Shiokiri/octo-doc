@@ -1,6 +1,5 @@
-package com.cym.notebook.Activity;
+package com.werun.notebook.Activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
@@ -10,12 +9,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.cym.notebook.Adapter.FragmentAdapter;
-import com.cym.notebook.Fragment.OneFragment;
-import com.cym.notebook.Fragment.ThreeFragment;
-import com.cym.notebook.Fragment.TwoFragment;
-import com.cym.notebook.R;
+import com.werun.notebook.Adapter.FragmentAdapter;
+import com.werun.notebook.Fragment.OneFragment;
+import com.werun.notebook.Fragment.ThreeFragment;
+import com.werun.notebook.Fragment.TwoFragment;
+import com.werun.notebook.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             viewPager.setCurrentItem(2);
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             //BottomNavigationView 点击事件监听
             bnView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                public boolean onNavigationItemSelected(@NotNull MenuItem menuItem) {
                     int menuId = menuItem.getItemId();
                     // 跳转指定页面：Fragment
                     switch (menuId) {

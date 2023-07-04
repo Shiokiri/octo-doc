@@ -1,4 +1,4 @@
-package com.cym.notebook.Activity;
+package com.werun.notebook.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cym.notebook.Bean.ResultSignup;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Bean.ResultSignup;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
 
 import java.io.IOException;

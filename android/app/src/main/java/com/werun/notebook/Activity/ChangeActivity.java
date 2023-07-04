@@ -1,4 +1,4 @@
-package com.cym.notebook.Activity;
+package com.werun.notebook.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,14 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cym.notebook.Bean.ResultLogin;
-import com.cym.notebook.Bean.ResultUser;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Bean.ResultUser;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

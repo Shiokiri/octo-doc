@@ -1,18 +1,18 @@
-package com.cym.notebook.Activity;
+package com.werun.notebook.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cym.notebook.Bean.Note;
-import com.cym.notebook.R;
+import com.werun.notebook.Bean.Note;
+import com.werun.notebook.R;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
 

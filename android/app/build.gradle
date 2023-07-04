@@ -4,12 +4,12 @@ plugins {
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.werun.notebook"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -40,13 +40,11 @@ dependencies {
     implementation 'androidx.fragment:fragment'
     implementation 'androidx.viewpager:viewpager'
 
-    //butterknife
     implementation 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
 
-
     implementation "com.squareup.okhttp3:okhttp:3.12.1"
-    implementation 'com.squareup.okio:okio:2.1.0' //依赖库
+    implementation 'com.squareup.okio:okio:2.1.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.android.material:material:1.0.0\''
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
@@ -55,9 +53,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.4.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     implementation "androidx.core:core-ktx:+"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
 
-}
-repositories {
-    mavenCentral()
 }

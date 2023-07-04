@@ -1,6 +1,4 @@
-package com.cym.notebook.Bean;
-
-import androidx.recyclerview.widget.RecyclerView;
+package com.werun.notebook.Bean;
 
 public class Classification {
     private String cid;

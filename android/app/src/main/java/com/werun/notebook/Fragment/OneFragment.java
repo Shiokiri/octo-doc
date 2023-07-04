@@ -1,4 +1,4 @@
-package com.cym.notebook.Fragment;
+package com.werun.notebook.Fragment;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,27 +13,25 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cym.notebook.Activity.AddNoteActivity;
-import com.cym.notebook.Activity.ClassificationActivity;
-import com.cym.notebook.Adapter.ClassificationAdapter;
-import com.cym.notebook.Adapter.NoteAdapter;
-import com.cym.notebook.Bean.Classification;
-import com.cym.notebook.Bean.Note;
-import com.cym.notebook.Bean.ResultNote;
-import com.cym.notebook.Bean.ResultUser;
-import com.cym.notebook.Bean.User;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Activity.AddNoteActivity;
+import com.werun.notebook.Adapter.NoteAdapter;
+import com.werun.notebook.Bean.Classification;
+import com.werun.notebook.Bean.Note;
+import com.werun.notebook.Bean.ResultNote;
+import com.werun.notebook.Bean.ResultUser;
+import com.werun.notebook.Bean.User;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,7 +59,7 @@ public class OneFragment extends Fragment {
     int flag=0;
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NotNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.onefragment_layout, container,false);
         SharedPreferences sp = getContext().getSharedPreferences("token", 0);
         String token = sp.getString("token", null);
@@ -227,11 +225,6 @@ public class OneFragment extends Fragment {
                                             recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
                                         }
                                     });
-
-
-
-
-
                                 }else{
 
                                 }

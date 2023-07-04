@@ -1,4 +1,4 @@
-package com.cym.notebook.Adapter;
+package com.werun.notebook.Adapter;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,18 +12,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cym.notebook.Activity.ClassificationNameChangeActivity;
-import com.cym.notebook.Activity.NoteActivity;
-import com.cym.notebook.Bean.Classification;
-import com.cym.notebook.Bean.Note;
-import com.cym.notebook.Bean.ResultClassification;
-import com.cym.notebook.Constant;
-import com.cym.notebook.R;
+import com.werun.notebook.Activity.NoteActivity;
+import com.werun.notebook.Bean.Note;
+import com.werun.notebook.Bean.ResultClassification;
+import com.werun.notebook.Constant;
+import com.werun.notebook.R;
 import com.google.gson.Gson;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -141,11 +140,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
                                 }
                             }
                         }).start();
-
-
-
-
-
                     }
                 }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
@@ -168,22 +162,17 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
                 parent.getContext().startActivity(intent);
             }
         });
-
-
-
-
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NotNull NoteAdapter.ViewHolder holder, int position) {
         Note note = mNoteList.get(position);
         holder.noteTitle.setText(note.getNoteTitle());
         //2022-04-26T14:56:00.946+00:00  这是日期的格式
         String day = note.getNoteCreateTime().substring(8,10);
         String month = note.getNoteCreateTime().substring(5,7);
         holder.noteDate.setText(day+"\n"+month+"月");
-
     }
 
     @Override
