@@ -38,7 +38,7 @@ export default {
   methods: {
     login() {
       this.$axios({
-        url: "/api/login",
+        url: "/backend/login",
         method: "post",
         Headers: {
           "Content-type": "application/x-www-form-urlencoded",

@@ -47,7 +47,7 @@ export default {
         inputErrorMessage: "密码不能为空！",
       }).then(({ value }) => {
         this.$axios({
-          url: "/api/user/changeUserPassword",
+          url: "/backend/user/changeUserPassword",
           method: "put",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -84,7 +84,7 @@ export default {
         inputErrorMessage: "用户名不能为空！",
       }).then(({ value }) => {
         this.$axios({
-          url: "/api/user/changeUserName",
+          url: "/backend/user/changeUserName",
           method: "put",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -115,7 +115,7 @@ export default {
     getUserInfo() {
       this.loading = true;
       this.$axios({
-        url: "/api/user/getUser",
+        url: "/backend/user/getUser",
         method: "get",
       })
         .then((res) => {

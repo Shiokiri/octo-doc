@@ -5,13 +5,11 @@ module.exports = defineConfig({
 module.exports = {
   devServer: {
     proxy: {
-      '/api': {
-        target: 'http://shiokiri.com:8081',  // 后台接口地址
-        secure: true,  // 如果是https接口，需要配置这个参数
+      '/backend': {
+        target: 'http://101.43.177.191:8081',  // 后台接口地址
         changeOrigin: true,  //是否跨域
-        pathRewrite: {	// 重写路径
-          '^/api': ''
-        }
+        pathRewrite: (path) => path.replace(/^\/backend/, '') // 重写路径
+        
       }
     }
   }

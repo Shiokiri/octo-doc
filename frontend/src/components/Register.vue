@@ -62,7 +62,7 @@ export default {
         });
       } else {
         this.$axios({
-          url: "/api/register",
+          url: "/backend/register",
           method: "post",
           headers: {
             "Content-type": "application/x-www-form-urlencoded",

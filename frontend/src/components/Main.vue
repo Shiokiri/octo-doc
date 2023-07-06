@@ -356,7 +356,7 @@ export default {
     },
     noteStateChange(nid, state) {
       this.$axios({
-        url: "/api/note/changeNoteCompletedState",
+        url: "/backend/note/changeNoteCompletedState",
         method: "put",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -380,7 +380,7 @@ export default {
         .then(() => {
           this.$axios(
             {
-              url: "/api/note/deleteNote",
+              url: "/backend/note/deleteNote",
               method: "delete",
               headers: {
                 "Content-type": "application/x-www-form-urlencoded",
@@ -390,7 +390,7 @@ export default {
               }),
             },
             this.$axios({
-              url: "/api/note/addNote",
+              url: "/backend/note/addNote",
               method: "post",
               headers: {
                 "Content-type": "application/x-www-form-urlencoded",
@@ -417,7 +417,7 @@ export default {
     },
     search() {
       this.$axios({
-        url: "/api/note/getNoteByNoteTitle",
+        url: "/backend/note/getNoteByNoteTitle",
         method: "get",
         headers: {
           "Content-type": "application/x-www-form-urlencoded",
@@ -444,7 +444,7 @@ export default {
     },
     editnote(nid) {
       this.$axios({
-        url: "/api/note/getNote",
+        url: "/backend/note/getNote",
         method: "get",
         headers: {
           "Content-type": "application/x-www-form-urlencoded",
@@ -480,7 +480,7 @@ export default {
         })
         .then(({ value }) => {
           this.$axios({
-            url: "/api/category/changeCategoryName",
+            url: "/backend/category/changeCategoryName",
             method: "put",
             headers: {
               "Content-type": "application/x-www-form-urlencoded",
@@ -523,7 +523,7 @@ export default {
     },
     getnotes() {
       this.$axios({
-        url: "/api/note/getAllNote",
+        url: "/backend/note/getAllNote",
         method: "get",
         headers: {
           "Content-type": "application/x-www-form-urlencoded",
@@ -546,7 +546,7 @@ export default {
     },
     getclass() {
       this.$axios({
-        url: "/api/user/getUser",
+        url: "/backend/user/getUser",
         method: "get",
       })
         .then((res) => {
@@ -569,7 +569,7 @@ export default {
     },
     addnote() {
       this.$axios({
-        url: "/api/note/addNote",
+        url: "/backend/note/addNote",
         method: "post",
         headers: {
           "Content-type": "application/x-www-form-urlencoded",
@@ -635,7 +635,7 @@ export default {
         })
         .then(({ value }) => {
           this.$axios({
-            url: "/api/category/addCategory",
+            url: "/backend/category/addCategory",
             method: "post",
             Headers: {
               "Content-type": "application/x-www-form-urlencoded",
@@ -668,7 +668,7 @@ export default {
         const obj = this.multipleSelection;
         obj.forEach((item) => {
           this.$axios({
-            url: "/api/note/deleteNote",
+            url: "/backend/note/deleteNote",
             method: "delete",
             headers: {
               "Content-type": "application/x-www-form-urlencoded",
@@ -695,7 +695,7 @@ export default {
       })
         .then(() => {
           this.$axios({
-            url: "/api/note/deleteNote",
+            url: "/backend/note/deleteNote",
             method: "delete",
             headers: {
               "Content-type": "application/x-www-form-urlencoded",
@@ -733,7 +733,7 @@ export default {
       })
         .then(() => {
           this.$axios({
-            url: "/api/category/deleteCategory",
+            url: "/backend/category/deleteCategory",
             method: "delete",
             headers: {
               "Content-type": "application/x-www-form-urlencoded",
