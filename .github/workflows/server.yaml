@@ -8,15 +8,15 @@ on:
         - backend/**
 
 jobs:
-  deploy:
+  deploy-production:
     runs-on: ubuntu-latest
     steps:
-      - name: upload & deploy
-        uses: appleboy/ssh-action@master
+      - name: sh deploy.sh 
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.PROD_HOST }}
           user: ${{ secrets.PROD_USER }}
           key: ${{ secrets.PROD_SSH_KEY }}
-          
-          last_ssh: |
+          connect_timeout: 10s
+          first_ssh: |
             sh deploy.sh
